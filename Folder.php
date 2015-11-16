@@ -139,11 +139,10 @@ class Folder {
                     return $size;
                     break;
                 case 'kb':
-                    return Number::round(($size / 1024), 2);
+                    return number_format((float)$size / 1024, 2, '.', '');
                     break;
                 case 'mb':
-                    return Number::round(($size / 1048576), 2);
-                    break;
+                    return number_format((float)$size / 1048576, 2, '.', '');
             }
         }
 
